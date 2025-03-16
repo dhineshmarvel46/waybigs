@@ -47,10 +47,10 @@ if(componentmounted){
       </div>
       </>
     )
-  } 
-  const filterproduct = (category) => {
-    const newFilter = data.filter((product) => product.category === category);
-    setFilter(newFilter);
+  }                                    
+  const filterproduct = (category) => {                                          
+    const newFilter = data.filter((product) => product.category === category); 
+    setFilter(newFilter);      
   }
 
   const searchfilter = (category) => {
@@ -58,7 +58,7 @@ if(componentmounted){
     setFilter(newFilter);
   }
   const handleSubmit = (e) => {
-    e.preventDefault(); // Prevents form submission
+    e.preventDefault(); /// Prevents form submission  
     searchfilter(searchval);
     setSearchval('');
     
