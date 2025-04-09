@@ -82,7 +82,7 @@ if(componentmounted){
         <div class="col-md-6">
             <form class="d-flex" onSubmit={handleSubmit}> 
                 <div class="input-group">
-                    <input class="form-control form-control-lg " value={searchval}  onChange={(e) => setSearchval(e.target.value)} type="text" placeholder="Search" aria-label="Search" autoFocus={focused}  onClick={() => setFocused(true)}/>
+                    <input class="form-control form-control-lg " value={searchval}  onChange={(e) => setSearchval(e.target.value)} type="text" placeholder="Example Nissan cars" aria-label="Search" autoFocus={focused}  onClick={() => setFocused(true)}/>
                     <button class="btn btn-primary px-4" type="submit" tabindex="-1">
                             <i className="fa fa-sign-in me-2"></i> Enter
                         </button>
