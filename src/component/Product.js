@@ -54,7 +54,7 @@ if(componentmounted){
   }
 
   const searchfilter = (category) => {
-    const newFilter = data.filter((product) => product.search === category.toLowerCase());
+    const newFilter = data.filter((product) => product.category.toLowerCase() === category.toLowerCase());
     setFilter(newFilter);
   }
   const handleSubmit = (e) => {
