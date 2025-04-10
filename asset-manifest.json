@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/waybigs/static/css/main.eebcebaa.css",
-    "main.js": "/waybigs/static/js/main.e634890e.js",
+    "main.js": "/waybigs/static/js/main.0d4c0f22.js",
     "static/js/488.d36dad53.chunk.js": "/waybigs/static/js/488.d36dad53.chunk.js",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/waybigs/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/fontawesome-webfont.eot": "/waybigs/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
@@ -10,11 +10,11 @@
     "static/media/fontawesome-webfont.woff2?v=4.7.0": "/waybigs/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
     "index.html": "/waybigs/index.html",
     "main.eebcebaa.css.map": "/waybigs/static/css/main.eebcebaa.css.map",
-    "main.e634890e.js.map": "/waybigs/static/js/main.e634890e.js.map",
+    "main.0d4c0f22.js.map": "/waybigs/static/js/main.0d4c0f22.js.map",
     "488.d36dad53.chunk.js.map": "/waybigs/static/js/488.d36dad53.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.eebcebaa.css",
-    "static/js/main.e634890e.js"
+    "static/js/main.0d4c0f22.js"
   ]
 }
