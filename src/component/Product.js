@@ -61,6 +61,7 @@ if(componentmounted){
     e.preventDefault(); /// Prevents form submission  
     searchfilter(searchval);
     setSearchval('');
+    setFocused(false)
     
   };
   
