@@ -68,7 +68,7 @@ if(componentmounted){
 
   const ShowProducts = () => {
     return(<div className=' me-2 mb-5 pb-7 '>
-    <div className='buttons d-flex  justify-content-center mb-5 pb-5 '>
+    <div className='buttons d-flex flex-wrap gap-2 justify-content-center mb-5 pb-5 '>
 <button className='btn btn-outline-dark mb-2 me-3 text-center' onClick={() => setFilter(data)}>All cars</button>
 <button className='btn btn-outline-dark mb-2 me-3 text-center'onClick={() => filterproduct("Ford cars")}>Ford cars</button>
 <button className='btn btn-outline-dark mb-2 me-3 text-center'onClick={() => filterproduct("Nissan cars")}>Nissan cars</button>
@@ -79,8 +79,8 @@ if(componentmounted){
 
 <div className="container mb-5">
     <div className="row justify-content-center">
-        <div className="col-md-6">
-            <form className="d-flex" onSubmit={handleSubmit}> 
+        <div className="col-12 col-sm-10 col-md-8 col-lg-6">
+            <form className="d-flex  w-100" onSubmit={handleSubmit}> 
                 <div className="input-group">
                     <input className="form-control form-control-lg " value={searchval}  onChange={(e) => setSearchval(e.target.value)} type="text" placeholder="Example Nissan cars" aria-label="Search" autoFocus={focused}  onClick={() => setFocused(true)}/>
                     <button className="btn btn-primary px-4" type="submit" tabIndex="-1">
@@ -98,7 +98,7 @@ if(componentmounted){
 {filter.map((product) => {
   return(
   
-  <div className='col-md-4  mb-4'>
+  <div className='col-12 col-sm-6 col-md-4 mb-4'>
   <div className="card h-90 text-center p-4 me-2 "key={product.id}> 
   <img src={product.image} className="card-img-top img-fluid object-fit-contain" alt={product.title}  style={{ height: '240px', width: '100%', objectFit: 'contain' }}   />
   <div className="card-body">
@@ -115,7 +115,7 @@ if(componentmounted){
 )}
   return (
     <div>
-      <div className='container my-5 py-5'>
+      <div className='container my-3 my-md-5 py-3 py-md-5'>
 <div className='row'>
   <div className='col-12 mb-5'> 
 <h1 className='display-6 fw-bolder text-center'>LATEST PRODUCTS</h1>
