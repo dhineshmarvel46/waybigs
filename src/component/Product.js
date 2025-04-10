@@ -6,7 +6,7 @@ function Product() {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState(data);
   const [loading, setLoading] = useState(false);
-  const [searchval, setSearchval] = useState();
+  const [searchval, setSearchval] = useState('');
   const[focused, setFocused] = useState(false);
   let componentmounted = true;
 
@@ -84,11 +84,12 @@ if(componentmounted){
             <div className="row g-2">
                 <div className="col-12 col-md-9">
                     <input className="form-control form-control-lg " value={searchval}  onChange={(e) => setSearchval(e.target.value)} type="text" placeholder="Example Nissan cars" aria-label="Search" autoFocus={focused}  onClick={() => setFocused(true)}/>
-                    <div className="col-12 col-md-3">
+                    
+               </div>
+               <div className="col-12 col-md-3">
                     <button className="btn btn-primary px-4" type="submit" tabIndex="-1">
                             <i className="fa fa-sign-in me-2"></i> Enter
                         </button> </div>
-                </div>
                 </div>
             </form>
         </div>
