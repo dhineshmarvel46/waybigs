@@ -77,13 +77,13 @@ if(componentmounted){
 <button className='btn btn-outline-dark mb-2 me-3 text-center'onClick={() => filterproduct("Fantacy cars")}>Fantacy cars</button>
 </div>
 
-<div class="container mb-5">
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <form class="d-flex" onSubmit={handleSubmit}> 
-                <div class="input-group">
-                    <input class="form-control form-control-lg " value={searchval}  onChange={(e) => setSearchval(e.target.value)} type="text" placeholder="Example Nissan cars" aria-label="Search" autoFocus={focused}  onClick={() => setFocused(true)}/>
-                    <button class="btn btn-primary px-4" type="submit" tabindex="-1">
+<div className="container mb-5">
+    <div className="row justify-content-center">
+        <div className="col-md-6">
+            <form className="d-flex" onSubmit={handleSubmit}> 
+                <div className="input-group">
+                    <input className="form-control form-control-lg " value={searchval}  onChange={(e) => setSearchval(e.target.value)} type="text" placeholder="Example Nissan cars" aria-label="Search" autoFocus={focused}  onClick={() => setFocused(true)}/>
+                    <button className="btn btn-primary px-4" type="submit" tabIndex="-1">
                             <i className="fa fa-sign-in me-2"></i> Enter
                         </button>
                 </div>
@@ -99,11 +99,11 @@ if(componentmounted){
   return(
   
   <div className='col-md-4  mb-4'>
-  <div class="card h-100 text-center p-4 me-2 "key={product.id}> 
+  <div className="card h-100 text-center p-4 me-2 "key={product.id}> 
   <img src={product.image} class="card-img-top" alt={product.title} height ="250px"   />
-  <div class="card-body">
-    <h5 class="card-title text-center mb-0">{product.title.substring(0,12)}</h5>
-    <p class="card-text mt-3">₹{product.price}</p>
+  <div className="card-body">
+    <h5 className="card-title text-center mb-0">{product.title.substring(0,12)}</h5>
+    <p className="card-text mt-3">₹{product.price}</p>
     <NavLink to={`/buyproduct/${product.id}`} className="btn btn-primary">BUY Now</ NavLink>
   </div>
 </div>
