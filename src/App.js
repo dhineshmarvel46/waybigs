@@ -9,6 +9,7 @@ import About from './component/About';
 import Buyproduct from './component/Buyproduct';
 import { Cart } from './component/Cart';
 import Login from './component/Login';
+import Register from './component/Register';
 function App() {
   const [count, setCount] = useState(0);
   const[cartdata,setCartdata] = useState([]);
@@ -29,6 +30,7 @@ function App() {
       <Route path="/buyproduct/:id" element={<Buyproduct  increment={increment}/>}/>
       <Route path="/cart/:id" element={<Cart cartdata={cartdata}/>}/>
       <Route path="/login" element={<Login/>}/>
+      <Route path="/register" element={<Register/>}/>
       </Routes>
       
     </div>
