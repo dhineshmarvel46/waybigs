@@ -85,11 +85,12 @@ if(componentmounted){
                 <div className="col-12 col-md-9">
                     <input className="form-control form-control-lg " value={searchval}  onChange={(e) => setSearchval(e.target.value)} type="text" placeholder="Example Nissan cars" aria-label="Search" autoFocus={focused}  onClick={() => setFocused(true)}/>
                     
-               </div>
-               <div className="col-12 col-md-3">
-                    <button className="btn btn-primary px-4" type="submit" tabIndex="-1">
+                    <div className="col-12 col-md-3">
+                    <button className="btn btn-primary px-4" type="submit" >
                             <i className="fa fa-sign-in me-2"></i> Enter
                         </button> </div>
+               </div>
+              
                 </div>
             </form>
         </div>
@@ -102,8 +103,8 @@ if(componentmounted){
 {filter.map((product) => {
   return(
   
-  <div className='col-12 col-sm-6 col-md-4 mb-4'>
-  <div className="card h-90 text-center p-4 me-2 "key={product.id}> 
+  <div className='col-12 col-sm-6 col-md-4 mb-4'key={product.id}>
+  <div className="card h-100 text-center p-4 me-2 "> 
   <img src={product.image} className="card-img-top img-fluid object-fit-contain" alt={product.title}  style={{ height: '240px', width: '100%', objectFit: 'contain' }}   />
   <div className="card-body">
     <h5 className="card-title text-center mb-0">{product.title.substring(0,12)}</h5>
