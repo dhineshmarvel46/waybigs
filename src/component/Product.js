@@ -80,12 +80,15 @@ if(componentmounted){
 <div className="container mb-5">
     <div className="row justify-content-center">
         <div className="col-12 col-sm-10 col-md-8 col-lg-6">
-            <form className="d-flex  w-100" onSubmit={handleSubmit}> 
-                <div className="input-group">
+            <form onSubmit={handleSubmit}> 
+            <div className="row g-2">
+                <div className="col-12 col-md-9">
                     <input className="form-control form-control-lg " value={searchval}  onChange={(e) => setSearchval(e.target.value)} type="text" placeholder="Example Nissan cars" aria-label="Search" autoFocus={focused}  onClick={() => setFocused(true)}/>
+                    <div className="col-12 col-md-3">
                     <button className="btn btn-primary px-4" type="submit" tabIndex="-1">
                             <i className="fa fa-sign-in me-2"></i> Enter
-                        </button>
+                        </button> </div>
+                </div>
                 </div>
             </form>
         </div>
