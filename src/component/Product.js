@@ -83,7 +83,7 @@ if(componentmounted){
             <form onSubmit={handleSubmit}> 
             <div className="row g-2">
                 <div className="col-12 col-md-9">
-                    <input className="form-control form-control-lg " value={searchval}  onChange={(e) => setSearchval(e.target.value)} type="text" placeholder="Example Nissan cars" aria-label="Search" autoFocus={focused}  onClick={() => setFocused(true)}/>
+                    <input className="form-control form-control-lg " value={searchval}  onChange={(e) => setSearchval(e.target.value)} type="text" placeholder="Example Nissan cars" aria-label="Search" />
                     
                </div>
 
