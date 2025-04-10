@@ -99,8 +99,8 @@ if(componentmounted){
   return(
   
   <div className='col-md-4  mb-4'>
-  <div className="card h-100 text-center p-4 me-2 "key={product.id}> 
-  <img src={product.image} class="card-img-top" alt={product.title} height ="250px"   />
+  <div className="card h-90 text-center p-4 me-2 "key={product.id}> 
+  <img src={product.image} className="card-img-top img-fluid object-fit-contain" alt={product.title}  style={{ height: '240px', width: '100%', objectFit: 'contain' }}   />
   <div className="card-body">
     <h5 className="card-title text-center mb-0">{product.title.substring(0,12)}</h5>
     <p className="card-text mt-3">₹{product.price}</p>
