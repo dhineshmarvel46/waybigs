@@ -85,10 +85,10 @@ if(componentmounted){
                 <div className="col-12 col-md-9">
                     <input className="form-control form-control-lg " value={searchval}  onChange={(e) => setSearchval(e.target.value)} type="text" placeholder="Example Nissan cars" aria-label="Search" autoFocus={focused}  onClick={() => setFocused(true)}/>
                     
-                    <div className="col-12 col-md-3">
+              
                     <button className="btn btn-primary px-4" type="submit" >
                             <i className="fa fa-sign-in me-2"></i> Enter
-                        </button> </div>
+                        </button> 
                </div>
               
                 </div>
