@@ -13,7 +13,7 @@ function Product() {
   useEffect(() => { 
     const getproduct = async () => {
  setLoading(true);
-const response = await fetch("https://mocki.io/v1/399fea99-4641-4900-b583-d2bd279180fb");
+const response = await fetch("https://mocki.io/v1/28a20aef-6a6c-4d41-8524-3ea056a90514");
 if(componentmounted){
   setData(await response.clone().json());
   setFilter(await response.json());
@@ -54,7 +54,7 @@ if(componentmounted){
   }
 
   const searchfilter = (category) => {
-    const newFilter = data.filter((product) => product.category.toLowerCase().trim() === category.toLowerCase().trim());
+    const newFilter = data.filter((product) =>  product.category.toLowerCase().includes(category.toLowerCase().trim()));
     setFilter(newFilter);
   }
   const handleSubmit = (e) => {

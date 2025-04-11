@@ -10,7 +10,7 @@ function Buyproduct({increment}) {
     useEffect(() => {
 const getproduct = async () => {
     setLoading(true);
-    const response = await fetch('https://mocki.io/v1/399fea99-4641-4900-b583-d2bd279180fb');
+    const response = await fetch('https://mocki.io/v1/28a20aef-6a6c-4d41-8524-3ea056a90514');
     const data = await response.json();
     console.log(typeof(id))
     const selectedProduct = data.find(product => product.id === parseInt(id));
@@ -24,17 +24,23 @@ const getproduct = async () => {
     const ShowProducts = () => {
         return(
             <>
-           <div className="col-md-6" key={product.id}>
-                    <img className="mt-5 ms-5" src={product.image} alt={product.title} height={450} width={450} />
+            <div className="container my-5">
+            <div className="row g-4 shadow rounded-4 p-4 bg-white align-items-center">
+
+           <div className="col-12 col-md-6 text-center" key={product.id}>
+                    <img className="img-fluid rounded" src={product.image} alt={product.title} style={{ maxHeight: "400px",objectFit: "cover", borderRadius: "12px",         // 🧽 Cover to trim awkward spacing
+    objectPosition: "center" }} />
                 </div>
-                <div className="col-md-6 mt-5 me-5" key={product.id}>
+                <div className="col-12 col-md-6" key={product.id}>
                     <div className="mt-3">
-                        <h3 className="mb-3 text-secondary text-uppercase">{product.category}</h3>
-                        <h2 className="text-uppercase display-6">{product.title}</h2>
-                        <p className="text-uppercase text-secondary">Rating<i className="fa fa-star ms-2 text-black">4.5</i></p>
-                        <h3 className="mt-3">₹{product.price}</h3>
+                        <h3 className="text-muted text-uppercase">{product.category}</h3>
+                        <h2 className="fw-bold text-dark text-uppercase">{product.title}</h2>
+                        <p className="text-uppercase text-secondary">Rating<i className="bi bi-star-fill text-warning"></i> <span className="text-black fw-bold ms-1">4.5</span></p>
+                        <h3 className="text-success fw-semibold mt-3">₹{product.price}</h3>
                         <NavLink to={`/cart/${product.id}`} onClick={() => increment(product)} className="btn btn-outline-dark mt-3">Add to Cart</NavLink>
                     </div>
+                </div>
+                </div>
                 </div>
             </>
 
