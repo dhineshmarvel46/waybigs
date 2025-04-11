@@ -49,7 +49,7 @@ if(componentmounted){
     )
   }                                    
   const filterproduct = (category) => {                                          
-    const newFilter = data.filter((product) => product.category === category); 
+    const newFilter = data.filter((product) => product.category.toLowerCase().includes(category.toLowerCase().trim())); 
     setFilter(newFilter);      
   }
 
