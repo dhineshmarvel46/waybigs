@@ -5,9 +5,14 @@
   "homepage": "https://dhineshmarvel46.github.io/waybigs",
   "dependencies": {
     "@popperjs/core": "^2.11.8",
+    "axios": "^1.8.4",
     "bootstrap": "^5.3.5",
+    "cors": "^2.8.5",
     "cra-template": "1.2.0",
+    "express": "^5.1.0",
     "font-awesome": "^4.7.0",
+    "mongoose": "^8.13.2",
+    "nodemon": "^3.1.9",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-loading-skeleton": "^3.5.0",
@@ -44,6 +49,7 @@
     ]
   },
   "devDependencies": {
+    "concurrently": "^9.1.2",
     "gh-pages": "^6.3.0"
   }
 }
