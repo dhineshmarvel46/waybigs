@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
-function Login() {
+function Login({username,setUsername}) {
    const [email,setEmail ] = useState('')
     const [password,setPassword ] = useState('')
     const navigate = useNavigate()
@@ -11,9 +11,11 @@ function Login() {
     const handlesubmit = (e) => {
       e.preventDefault()
        axios.post('http://localhost:3001/login',{email,password})
-          .then( result =>{ console.log(result)
-            if(result.data === "success"){
-            navigate('/');}})
+          .then( res =>{ console.log(res)
+            if(res.data.message === "success"){
+            navigate('/')
+           setUsername(res.data.name)  
+                      ;}})
           .catch(err => console.log(err))
     
     }

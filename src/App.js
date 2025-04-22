@@ -13,6 +13,7 @@ import Register from './component/Register';
 function App() {
   const [count, setCount] = useState(0);
   const[cartdata,setCartdata] = useState([]);
+  const [username,setUsername ] = useState('')
   const increment = (product) => {
     setCount(count + 1);
     const newCart = [...cartdata,product];
@@ -24,12 +25,12 @@ function App() {
       <Nav count={count}/>
   
      <Routes>
-      <Route exact path="/" element={<Home/>}/>
+      <Route exact path="/" element={<Home username = {username}/>}/>
       <Route path="/product" element={<Product/>}/>
       <Route path="/about" element={<About/>}/>
       <Route path="/buyproduct/:id" element={<Buyproduct  increment={increment}/>}/>
       <Route path="/cart/:id" element={<Cart cartdata={cartdata}/>}/>
-      <Route path="/login" element={<Login/>}/>
+      <Route path="/login" element={<Login username = {username} setUsername = {setUsername}/>}/>
       <Route path="/register" element={<Register/>}/>
       </Routes>
       
