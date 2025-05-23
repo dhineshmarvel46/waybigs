@@ -1,19 +1,27 @@
 import React,{useState,useEffect} from 'react'
 import Skeleton from 'react-loading-skeleton';
 import { NavLink } from 'react-router-dom';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
-function Product() {
+function Product({setAuthenticated}) {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState(data);
   const [loading, setLoading] = useState(false);
   const [searchval, setSearchval] = useState('');
   const[focused, setFocused] = useState(false);
   let componentmounted = true;
-
+const navigate = useNavigate()
+axios.defaults.withCredentials = true
+axios.get('http://localhost:3001/product')
+.then(result => { if(result.data.valid){console.log(result.data.message);setAuthenticated(true)} else{navigate('/');console.log('unauthorised');setAuthenticated(false)} })
+.catch(err => {console.log(err)})
   useEffect(() => { 
+    
     const getproduct = async () => {
+      
  setLoading(true);
-const response = await fetch("https://mocki.io/v1/28a20aef-6a6c-4d41-8524-3ea056a90514");
+const response = await fetch("https://mocki.io/v1/1f784910-f512-4ae9-b3b3-432e84fe5ef0");
 if(componentmounted){
   setData(await response.clone().json());
   setFilter(await response.json());

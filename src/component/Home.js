@@ -1,7 +1,9 @@
 import React from 'react'
 import Product from './Product'
 
-function Home({username}) {
+
+function Home({username,authenticated}) {
+
   return (
     <div>
   <div className='my-4 fw-bolder text-uppercase ms-2'>Welcome, {username}</div> 
@@ -14,7 +16,7 @@ function Home({username}) {
   </div>
   
 </div>
-<Product/>
+{authenticated ? <Product/> : null}
     </div>
   )
 }

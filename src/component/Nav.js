@@ -1,6 +1,11 @@
-import React from 'react'
+
 import { NavLink } from 'react-router-dom'
-function nav({count}) {
+
+function Nav({count,authenticated}) {
+   
+ 
+    
+ 
   return (
     <div>
         <nav className="navbar navbar-expand-lg bg-body-tertiary bg-white py-4 shadow-sm">
@@ -14,9 +19,10 @@ function nav({count}) {
         <li className="nav-item">
           <NavLink className="nav-link active" aria-current="page" to ="/">Home</NavLink>
         </li>
+         {authenticated  ? (
         <li className="nav-item">
           <NavLink className="nav-link " to="/Product">Product</NavLink>
-        </li>
+        </li> ) : null}
         <li className="nav-item">
           <NavLink className="nav-link" to="/about">About</NavLink>
         </li>
@@ -36,4 +42,4 @@ function nav({count}) {
   )
 }
 
-export default nav
+export default Nav

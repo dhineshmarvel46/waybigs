@@ -10,7 +10,7 @@ function Buyproduct({increment}) {
     useEffect(() => {
 const getproduct = async () => {
     setLoading(true);
-    const response = await fetch('https://mocki.io/v1/28a20aef-6a6c-4d41-8524-3ea056a90514');
+    const response = await fetch('https://mocki.io/v1/1f784910-f512-4ae9-b3b3-432e84fe5ef0');
     const data = await response.json();
     console.log(typeof(id))
     const selectedProduct = data.find(product => product.id === parseInt(id));
